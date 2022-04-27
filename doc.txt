@@ -1,0 +1,37 @@
+model.py:
+    we use this file to create delete models or tables in database
+settings.py:
+    INSTALLED_APPS = [
+        'mention app name'   Model.geek
+    ]
+    to upload image:
+        first we need to go in
+
+        settings.py:
+        and the  we have to type
+            MEDIA_ROOT = os.join.path(BASE_DIR,'media')
+                MEDIA_ROOT is for server path to store files in the computer.
+
+            MEDIA_URL = '/media/'
+                MEDIA_URL is the reference URL for browser to access the files over Http.
+        
+model.py:
+    to create image type code
+
+ 
+Python manage.py makemigrations:
+    makemigrations basically generates the SQL commands for preinstalled
+    apps (which can be viewed in installed apps in settings.py) and your newly
+    created app’s model which you add in installed apps
+
+
+Python manage.py migrate:
+    migrate executes those SQL commands in the database file. 
+
+After above programming we have to go to admin.py
+
+admin.py:
+    we have to import model.py
+    then we need to map class of model.py  to admin site
+    admin.site.register(class name)
+
